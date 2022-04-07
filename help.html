@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Doc</title>
+    <link rel="icon" href="help.png" type="image/icon type">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+</head>
+<style>
+    body {
+            margin: 50px;
+            border-style: dashed;
+            border-width: 5px;
+            border-color: #f00fff;
+            border-radius: 50px;
+            padding: 20px;
+        }
+</style>
+<body class="body_main">
+    <center>
+        <h1>Welcome <label id="name"></label></h1>
+        <label>Comment section is complete. Help section working. For comment section, please make sure you insert your name without any special characters to make it easier for me to know the suggestions. For the room names as well, until unknown problem is fixed, please use the same room name as the username. To prevent confusion, please use the key given by Sandhya for both roomname and username.</label>
+        <br>
+        <label>Even when rooms for suggestion and comments have been created, they will not show up on the home screen. Please use your name as the roomname.</label>
+        <br>
+        <label>I need help with: </label>
+        <div id="output"></div>
+        <hr>
+        <h1>Comments and suggestions</h1>
+        <button type="submit" onclick="redirect()">Go to comments and suggestions page.</button>
+        <br>
+        <button> <a href="login.html"> Back</a></button>
+    </center>
+</body>
+<script src="help.js">
+    user_name = localStorage.getItem("user");
+room_name = localStorage.getItem("roomname");
+document.getElementById("name").innerHTML = user_name;
+var firebaseConfig = {
+    apiKey: "AIzaSyCaG3h_ucaMzyVlpGXB-6nNSk8eGPkx2rs",
+    authDomain: "constellations-f8f62.firebaseapp.com",
+    databaseURL: "https://constellations-f8f62-default-rtdb.firebaseio.com",
+    projectId: "constellations-f8f62",
+    storageBucket: "constellations-f8f62.appspot.com",
+    messagingSenderId: "918076456711",
+    appId: "1:918076456711:web:ad89d6708c266c69c9cfa2",
+    measurementId: "G-RS6VJFRFWG"
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+
+function getData() { firebase.database().ref("/"+room_name).on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey  = childSnapshot.key; childData = childSnapshot.val(); if(childKey != "purpose") {
+       firebase_message_id = childKey;
+       message_data = childData;
+//Start code
+    console.log(firebase_message_id);
+    console.log(message_data);
+    var help = "<h3 class='eye-p'>" + message_data["1"] +"</h3>"
+    document.getElementById("output").innerHTML += help;
+//end code
+    } });  }); }
+getData();
+
+function redirect() {
+    window.location = "https://sandhyas14.github.io/Kwitter/"
+}
+</script>
+</html>

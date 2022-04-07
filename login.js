@@ -20,7 +20,7 @@ function login() {
             localStorage.setItem("user", "Mrs. Goodwin");
             localStorage.setItem("roomname", "Goodwin")
             document.getElementById("key").value = "";
-            window.location = "Help.html";
+            window.location = "help.html";
         }
         else {
             window.alert("Wrong password");
@@ -32,7 +32,7 @@ function login() {
             localStorage.setItem("user", "Shreyas");
             localStorage.setItem("roomname", "Shreyas")
             document.getElementById("key").value = "";
-            window.location = "Help.html";
+            window.location = "help.html";
         }
         else {
             window.alert("Wrong Password");
