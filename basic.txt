@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <title>The Human Eye and its Functions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Mr+De+Haviland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <nav class="navbar-inverse" style="position: sticky; top: 0; z-index: 99999;">
@@ -35,6 +37,7 @@
             <div class="dropdown-content">
               <a href="">Math</a>
               <a href="">Hindu Religion</a>
+              <a href="index.html">Back to Intro</a>
               <a href=""></a>
               <a href="credit.html">Credits</a>
             </div>
@@ -42,27 +45,14 @@
         <span class="dropdown">
             <button class="dropbtn"> Related Topics</button>
             <div class="dropdown-content">
-              <a href="https://academyoffice79.github.io/Stellar-Parallax/">Stellar Parallax</a>
+              <a href="">Stellar Parallax</a>
             </div>
         </span>
     </nav>
     <div class="container">
         <center>
-            <marquee scrollmount="25" direction="left" style="text-align: center; font-family: 'Petit Formal Script', cursive;"><h1>Are constellations real or are they just a trick of light?</h1></marquee>
-            <img src="https://earthsky.org/upl/2020/10/ocean-autumn-sky-2020-e1603233723605.png">
-            <p>
-                Look into the sky at the darkest point of night in an open space without any other light
-                except red light. The stars dotting the night sky are beautiful, aren't they? The bad
-                news is, the constellations or patterns of those stars are NOT  real. But how are they
-                not real? This question is answered through studying light, the human eye and star 
-                movement. But that is just the beginning. Outer space is no little thing. There are 
-                billions of factors that go into the same thing, many of which humans don't even know 
-                about. In later chapters, we will also talk about the expansion of the universe and bring
-                a little of it then. Let's start small and start to get bigger and bigger.
-            </p>
-            <button class="btn btn-header" onclick="chapter1()">Chapter 1: Human Eye and its functions</button>
+            <h1></h1>
         </center>
     </div>
 </body>
-<script src="chapters.js"></script>
-</html> 
+</html>

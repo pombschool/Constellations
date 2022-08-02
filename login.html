@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <style>
     #login {
@@ -30,10 +30,10 @@
 <body>
     <h1>Login Page</h1>
     <center id="warning">
-        <h1>Note: Login in only available for certain people</h1>
+        <h1 style="text-shadow: 2px 2px 5px red;">Note: Login in only available for certain people</h1>
         <button onclick="continu()" class="btn btn-danger">Continue</button>
     </center>
-    <center> <button class="btn btn-success" onclick="back()">Back</button> </center>
+    <center> <button class="btn btn-success" onclick="back()">Back</button> <br><label>Back button takes you to introduction.</label></center>
     <center>
         <section id="login">
             <h3>Username:</h3>
@@ -49,5 +49,78 @@
         </section>
     </center>
 </body>
-<script src="login.js"></script>
+<script>
+    var firebaseConfig = {
+    apiKey: "AIzaSyCaG3h_ucaMzyVlpGXB-6nNSk8eGPkx2rs",
+    authDomain: "constellations-f8f62.firebaseapp.com",
+    databaseURL: "https://constellations-f8f62-default-rtdb.firebaseio.com",
+    projectId: "constellations-f8f62",
+    storageBucket: "constellations-f8f62.appspot.com",
+    messagingSenderId: "918076456711",
+    appId: "1:918076456711:web:ad89d6708c266c69c9cfa2",
+    measurementId: "G-RS6VJFRFWG"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+function login() {
+    user = document.getElementById("key").value;
+    username = document.getElementById("username").value;
+    if(username == "Donna"){
+        if(user == "Goodwin") {
+            localStorage.setItem("user", "Mrs. Goodwin");
+            localStorage.setItem("roomname", "Goodwin")
+            document.getElementById("key").value = "";
+            window.location = "help.html";
+        }
+        else {
+            window.alert("Wrong password");
+            document.getElementById("key").value = "";
+        }
+    }
+    else if(username == "$hreyas"){
+        if (user == "Illindala"){
+            localStorage.setItem("user", "Shreyas");
+            localStorage.setItem("roomname", "Shreyas")
+            document.getElementById("key").value = "";
+            window.location = "help.html";
+        }
+        else {
+            window.alert("Wrong Password");
+            document.getElementById("key").value = "";
+        }
+    }
+    else if(username == "All") {
+        if (user == "Teacher") {
+            localStorage.setItem("user", "All");
+            document.getElementById("key").value = "";
+            window.location = "Teacherhelp.html";
+        }
+        else if(user == "friend") {
+            localStorage.setItem("user", "All");
+            document.getElementById("key").value = "";
+            window.location = "friendHelp.html";
+        }
+        else {
+            window.alert("Wrong Password");
+            document.getElementById("key").value = "";
+        }
+    }
+    else {
+        window.alert("Wrong Username and/or Password");
+        document.getElementById("key").value = "";
+        document.getElementById("username").value = "";
+    }
+}
+
+function continu() {
+    document.getElementById("warning").style = "display: none;";
+    document.getElementById("login").style = "display: inline;";
+}
+
+function back() {
+    window.location = "index.html";
+}
+</script>
 </html>

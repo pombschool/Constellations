@@ -1,31 +1,10 @@
-.eye_body {
-    text-align: center;
-}
-
-.eye-p {
-    color: green;
-    font-family: 'Akaya Telivigala', cursive;
+body {
+  background-color: #000030;
 }
 
 h1{
     color: #ff4400;
     font-size: 35px;
-}
-
-.body_main, .bodymodule{
-    background-color: #00B0FF;
-    text-align: center;
-  }
-
-
-.blue-background {
-  background-color: blue;
-  text-align: center;
-}
-
-.green-background {
-  background-color: green;
-  text-align: center;
 }
 
   h1{
@@ -34,16 +13,16 @@ h1{
   }
 
   img{
-    height: 425px;
-    border-style: dashed;
-    border-width: 5px;
-    border-color: yellow;
-    border-radius: 30px;
-    padding: 10px;
+    height: 425px !important;
+    border-style: dashed !important;
+    border-width: 5px !important;
+    border-color: yellow !important;
+    border-radius: 30px !important;
+    padding: 10px !important;
   }
   
   p{
-    color: #000000;
+    color: white;
     font-size: 20px;
     font-family: 'Akaya Telivigala', cursive !important;
   }
@@ -57,3 +36,79 @@ h1{
   body {
     height: fit-content !important;
   }
+
+body {
+    margin-bottom: 15px;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #00ffd5;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  position: sticky;
+  margin-left: 50px;
+  float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  height: auto;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+marquee {
+  width: 70%;
+}
+
+h1, h3 {
+  font-family: 'Petit Formal Script', cursive;
+  color: red;
+  font-weight: bolder;
+}
+hr {
+  height: 8px;
+  background-color: white;
+}
+
+.navbar-inverse {
+  background-color: antiquewhite;
+}
+
+a, button {
+  text-shadow: .5px .5px black;
+}
